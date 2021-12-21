@@ -27,14 +27,13 @@ function printValeu(obj, key){
 }//   동적으로 key의 value값을 가져올 때 사용한다.
 printValue(ellie, 'name');
 
-// 3. Property value shorthand
-const person1 = {name:, age:};
-const person2 = {name:, age:};
-const person3 = {name:, age:};
+// 3. How to shorthand repeated property value shorthand
+const person1 = {name:, age:}; //ex1
+const person2 = {name:, age:}; //ex2
+const person3 = {name:, age:}; //ex3
 const person4 = new Person('ellie', 30);
 console.log(person4);
-
-// 4. constructor function like class constructor
+// 4. constructor function like class constructsor
 function Person(name, age){
     //this = {};
     this.name = name;
@@ -57,7 +56,7 @@ for(let i = 0; i<array.length ; i++){
     console.log(array[i]);
 }
 for(value of array){
-    console.log(value );
+    console.log(value);
 }
 
 // 7. cloning
@@ -66,10 +65,10 @@ const user = {name: 'ellie', age: '20'};
 const user2 = user;
 
 const user4 = Object.assign({}, user);
-consolelog(user4);
+console.log(user4);
 
 const fruit1 = {color: 'red'};
 const fruit2 = {color: 'blue', size: 'big'};
-const mixed = Object.assign({}, fruit1, fruit2);//assign에서 뒤에 있는 배열의 key의 value가 앞에 있는 배열의 동일한 key의 value를 덮어버린다.            
+const mixed = Object.assign({}, fruit1, fruit2);//assign에서 뒤에 있는 배열(fruit2)의 key와 앞에 있는 배열(fruit1)안에 key가 동일하다면, 뒤에 있는 배려(fruit2)의 value로 덮어진다.            
 console.log(mixed.color);
 console.log(mixed.size);
